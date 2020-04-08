@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api/v1/on-covid19/logs", morgan("dev"));
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.use("/api/v1", covidRoute);
